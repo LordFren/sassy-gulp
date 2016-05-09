@@ -25,10 +25,14 @@ const paths = {
         "./src/img/**/*.+(png|jpg|jpeg|gif|svg)"
     ],
     fonts: [
-        "./src/fonts/*.+(eot|woff2|woff|ttf|svg|otf)"
+        "./src/fonts/**/*.+(eot|woff2|woff|ttf|svg|otf)"
     ],
     code: [
-        "./src/*.+(html|php)"
+        "./src/**/*.+(html|php)",
+        "!./src/fonts/", "!./src/fonts/**",
+        "!./src/img/", "!./src/img/**",
+        "!./src/js/", "!./src/js/**",
+        "!./src/styles/", "!./src/styles/**"
     ],
     js: [
         "./src/js/**/*.js",
