@@ -138,10 +138,10 @@ gulp.task("clean", () => {
 gulp.task("default", ["scss", "copyCode", "copyFonts", "copyJs", "useref", "images"]);
 
 gulp.task("watch", ["scss", "copyCode", "copyFonts", "copyJs", "useref", "images", "browserSync"], () => {
-    gulp.watch(paths.styles[0], ["scss"]);
-    gulp.watch(paths.styles[3], ["copyCode"], browserSync.reload);
-    gulp.watch(paths.styles[4], ["copyJs"], browserSync.reload);
-    gulp.watch(paths.styles[1], ["images"], browserSync.reload);
+    gulp.watch(paths.styles, ["scss"]);
+    gulp.watch(paths.code, ["copyCode"], browserSync.reload);
+    gulp.watch(paths.js, ["copyJs"], browserSync.reload);
+    gulp.watch(paths.images, ["images"], browserSync.reload);
 });
 
 gulp.task("dist", ["buildProduction", "scss", "copyCode", "copyFonts", "useref", "images"]);
