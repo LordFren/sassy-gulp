@@ -19,7 +19,7 @@ let isProduction = false;
 
 const paths = {
     styles: [
-        "./src/styles/**/*.scss"
+        "./src/styles/index.scss"
     ],
     images: [
         "./src/img/**/*.+(png|jpg|jpeg|gif|svg)"
