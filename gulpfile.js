@@ -138,7 +138,7 @@ gulp.task("clean", () => {
 gulp.task("default", ["scss", "copyCode", "copyFonts", "copyJs", "useref", "images"]);
 
 gulp.task("watch", ["scss", "copyCode", "copyFonts", "copyJs", "useref", "images", "browserSync"], () => {
-    gulp.watch(paths.styles, ["scss"]);
+    gulp.watch(["./src/styles/index.scss", "./src/styles/**/*.scss", "./src/styles/**/*.css"], ["scss"]);
     gulp.watch(paths.code, ["copyCode"], browserSync.reload);
     gulp.watch(paths.js, ["copyJs"], browserSync.reload);
     gulp.watch(paths.images, ["images"], browserSync.reload);
